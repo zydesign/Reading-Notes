@@ -1,4 +1,14 @@
 2017.4.28  
-创建新变量的用法相当于继承.  
-声明一个新变量，给它赋值其他对象、数组、new实例，就会继承这些对象、数组、new实例的属性；
-然后可以修改这些属性，调用这些属性，添加新属性（增、删、改、查），都不会对引用的对象造成影响。 
+1）创建新变量的用法相当于继承.  
+   声明一个新变量，给它赋值其他对象、数组、new实例，就会继承这些对象、数组、new实例的属性；
+   然后可以修改这些属性，调用这些属性，添加新属性（增、删、改、查），都不会对引用的对象造成影响。 
+
+2）js用法：通过call和apply，我们可以实现对象继承（括号里面的继承外面的），call和apply不同的是，call后面的参数为单个，apply为数组参数，例子：
+var Parent = function(){
+    this.name = "yjc";
+    this.age = 22;
+}
+var child = {};
+console.log(child);//Object {} ,空对象
+Parent.call(child);
+console.log(child); //Object {name: "yjc", age: 22}
