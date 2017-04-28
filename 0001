@@ -12,3 +12,6 @@ var child = {};
 console.log(child);//Object {} ,空对象
 Parent.call(child);
 console.log(child); //Object {name: "yjc", age: 22}
+
+2017.4.28
+1)新对象或工厂函数的继承、添加新属性、修改属性，调用运行方法的灵活运用
