@@ -15,3 +15,8 @@ console.log(child); //Object {name: "yjc", age: 22}
 
 2017.4.28
 1)新对象或工厂函数的继承、添加新属性、修改属性，调用运行方法的灵活运用
+
+2017.4.30
+1）js语言中的B.call(A,arg1, arg2)是基于对象继承，直接就拥有B对象的内部属性,让A继承B，arg1, arg2是参数；等同于B.applyl(A,[arg1, arg2]);
+   nodejs的util.inherits（A,B）是基与原型prototype的继承，让A继承B.prototype；
+   通常是结合call和util.inherits()，来继承和扩展工厂函数
