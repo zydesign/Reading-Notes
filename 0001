@@ -20,3 +20,10 @@ console.log(child); //Object {name: "yjc", age: 22}
 1）js语言中的B.call(A,arg1, arg2)是基于对象继承，直接就拥有B对象的内部属性,让A继承B，arg1, arg2是参数；等同于B.applyl(A,[arg1, arg2]);
    nodejs的util.inherits（A,B）是基与原型prototype的继承，让A继承B.prototype；
    通常是结合call和util.inherits()，来继承和扩展工厂函数
+
+2017.5.4
+js数组与对象的区别：
+ 数组表示有序数据的集合，而对象表示无序数据的集合。如果数据的顺序很重要，就用数组，否则就用对象。
+
+2017.5.10
+管理类是专门把一些类实例作为自己的工厂函数属性，或实例的数组作为属性，方便自己调用这些实例创建方法
