@@ -31,7 +31,7 @@ js数组与对象的区别：
 
 2017.5.11
  aoi的实现：灯塔储存实体ids和观察者ids。
-  1）当add、remove、update时，更新实体ids，对应灯塔的Watchers获取uids，并发消息。
+  1）当add、remove、update时，更新实体ids，获取对应灯塔的Watchers的uids，并发消息。
      类型add、remove时{id: obj.id, type:obj.type, watchers:this.towers[p.x][p.y].watchers}
      类型updat时 {id: obj.id, type:obj.type, oldWatchers:oldTower.watchers, newWatchers:newTower.watchers}
      
