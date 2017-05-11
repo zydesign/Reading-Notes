@@ -35,7 +35,7 @@ js数组与对象的区别：
      类型add、remove时{id: obj.id, type:obj.type, watchers:this.towers[p.x][p.y].watchers}
      类型updat时 {id: obj.id, type:obj.type, oldWatchers:oldTower.watchers, newWatchers:newTower.watchers}
      
-  2）当updateWatcher时，是更新单个观察者储存和广播，先处理灯塔Watchers的删除和增加，
+  2）当updateWatcher时，是对单个观察者储存和对该观察者的广播，先处理灯塔Watchers的删除和增加，
      并获取删除该观察者的灯塔的实体ids（removeObjs）、增加该观察者的灯塔的实体ids（addObjs） 发消息给该观察者。
      类型updateWatcher时{{id: watcher.id, type:watcher.type, addObjs: addObjs, removeObjs:removeObjs}}
      
