@@ -30,7 +30,7 @@ js数组与对象的区别：
 2）继承类是继承父类，从而拥有父类的属性，并添加自己的新属性
 
 2017.5.11
- aoi的实现：灯塔储存实体ids和观察者ids。
+1. aoi的实现：灯塔储存实体ids和观察者ids。
   1）当add、remove、update时，添加、删除、改变单个实体id的在灯塔中的储存，获取对应灯塔的Watchers的uids，给对应的观察者们发消息。
      类型add、remove时{id: obj.id, type:obj.type, watchers:this.towers[p.x][p.y].watchers}
      类型updat时 {id: obj.id, type:obj.type, oldWatchers:oldTower.watchers, newWatchers:newTower.watchers}
@@ -39,7 +39,9 @@ js数组与对象的区别：
      并获取删除该观察者的灯塔的实体ids（removeObjs）、增加该观察者的灯塔的实体ids（addObjs），给单个观察者发消息。
      类型updateWatcher时{{id: watcher.id, type:watcher.type, addObjs: addObjs, removeObjs:removeObjs}}
      
-     
+ 2.js的 Break 和 Continue 语句区别。都是用于for循环里面，一般结合if语句里面，
+   1）break是跳出for循环，会继续执行该循环之后的代码（如果有的话）
+   2）Continue是不继续Continue后面的代码，返回继续for循环
      
      
      
