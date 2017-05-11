@@ -3,7 +3,8 @@
    声明一个新变量，给它赋值其他对象、数组、new实例，就会继承这些对象、数组、new实例的属性；
    然后可以修改这些属性，调用这些属性，添加新属性（增、删、改、查），都不会对引用的对象造成影响。 
 
-2）js用法：通过call和apply，我们可以实现对象继承（括号里面的继承外面的），call和apply不同的是，call后面的参数为单个，apply为数组参数，例子：
+2）js用法：通过call和apply，我们可以实现对象继承（括号里面的继承外面的），call和apply不同的是，call后面的参数为单个，
+apply为数组参数，例子：
 var Parent = function(){
     this.name = "yjc";
     this.age = 22;
@@ -17,7 +18,8 @@ console.log(child); //Object {name: "yjc", age: 22}
 1)新对象或工厂函数的继承、添加新属性、修改属性，调用运行方法的灵活运用
 
 2017.4.30
-1）js语言中的B.call(A,arg1, arg2)是基于对象继承，直接就拥有B对象的内部属性,让A继承B，arg1, arg2是参数；等同于B.applyl(A,[arg1, arg2]);
+1）js语言中的B.call(A,arg1, arg2)是基于对象继承，直接就拥有B对象的内部属性,让A继承B，arg1, arg2是参数；
+   等同于B.applyl(A,[arg1, arg2]);
    nodejs的util.inherits（A,B）是基与原型prototype的继承，让A继承B.prototype；
    通常是结合call和util.inherits()，来继承和扩展工厂函数
 
@@ -31,12 +33,14 @@ js数组与对象的区别：
 
 2017.5.11
 1. aoi的实现：灯塔储存实体ids和观察者ids。
-  1）当add、remove、update时，添加、删除、改变单个实体id的在灯塔中的储存，获取对应灯塔的Watchers的uids，给观察者们发消息（发消息给其他玩家）。
+  1）当add、remove、update时，添加、删除、改变单个实体id的在灯塔中的储存，获取对应灯塔的Watchers的uids，给观察者们
+  发消息（发消息给其他玩家）。
      类型add、remove时{id: obj.id, type:obj.type, watchers:this.towers[p.x][p.y].watchers}
      类型updat时 {id: obj.id, type:obj.type, oldWatchers:oldTower.watchers, newWatchers:newTower.watchers}
      
   2）当updateWatcher时，是对单个观察者储存和对该观察者的广播，先处理灯塔Watchers的删除和增加，
-     并获取删除该观察者的灯塔的实体ids（removeObjs）、增加该观察者的灯塔的实体ids（addObjs），给单个观察者发消息（给玩家自己发消息）。
+  并获取删除该观察者的灯塔的实体ids（removeObjs）、增加该观察者的灯塔的实体ids（addObjs），给单个观察者发消息（给
+  玩家自己发消息）。
      类型updateWatcher时{{id: watcher.id, type:watcher.type, addObjs: addObjs, removeObjs:removeObjs}}
      
  2.js的 Break 和 Continue 语句区别。都是用于for循环里面，一般结合if语句里面，
